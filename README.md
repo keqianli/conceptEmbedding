@@ -67,6 +67,16 @@ MIN_PHRASE_SUPPORT=10
 ```
 Number of occurrences for a valid domain keyphrase in the corpus.
 
+## Input Format
+The input should contain one document each line, for example
+
+```
+this is document 1
+this is document 2
+...
+```
+
+####For other parameters regarding each individual module, please check the corresponding source files.
 
 
 
