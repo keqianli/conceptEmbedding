@@ -76,9 +76,4 @@ this is document 2
 ...
 ```
 
-####For other parameters regarding each individual module, please check the corresponding source files.
-
-
-
-
 
