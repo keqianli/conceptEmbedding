@@ -37,7 +37,14 @@ $ ./segmentating_embedding.sh  #run the concept extraction, segmentation and emb
 
 ## Parameters
 The running parameters are located in segmentating_embedding.sh
-
+```
+DATASET="signal_processing"
+```
+DATASET refers to the name you assign to the dataset
+```
+DATADIR_oneDocPerFile=`pwd`/data/signal_processin_oneDocPerFile
+```
+DATADIR_oneDocPerFile refers to the directory where the input is stored in one-document-per-file format. Set this value to be non-emtpy if your file are in this format.
 ```
 DATADIR=`pwd`/data/signal_processing
 ```
@@ -47,10 +54,7 @@ RAW_TEXT=$DATADIR/input.txt
 ```
 RAW_TEXT refers to the input text file
 
-```
-DATASET="signal_processing"
-```
-DATASET refers to a label that is assigned to the specific run
+
 
 ```
 OMP_NUM_THREADS=36
