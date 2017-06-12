@@ -4,7 +4,7 @@ export DATADIR=`pwd`/data/signal_processing
 export RAW_TEXT=$DATADIR/input.txt
 
 export OMP_NUM_THREADS=36
-export NUM_KEYPHRASES=40000
+export RETAIN_PHRASES_RATIO=.5
 export MIN_PHRASE_SUPPORT=10
 
 if [ ! -z "$DATADIR_oneDocPerFile" ]; then
