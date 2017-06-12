@@ -73,3 +73,15 @@ Number of occurrences for a valid domain keyphrase in the corpus.
 
 ## Input Format
 The input can be either one document per line or one document per file. Depending on whether you want to set the paramter $DATADIR_oneDocPerFile.
+
+## Output Format
+There output consists of 
+* segmented_text.txt_phraseAsWord
+The segmented text, each phrase is represented as words joined by underscore.
+* segmented_text.txt_phraseAsWord.concept_embedding*
+The concept/phrase embedding, each line takes the following form.
+```
+[concept]\t[embedding array]
+```
+* segmented_text.txt_phraseAsWord.model*
+The dump of gensim word2vec model.

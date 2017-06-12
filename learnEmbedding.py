@@ -33,7 +33,7 @@ for size in [50,128,200]:
 
       concept_embeddings = [(w,model.syn0[model.vocab[w].index]) for w in model.index2word if '_' in w]
 
-      model.save(file + '.model_wordPruning_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size))
+      model.save(file + '.model_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size))
       with open(file+'.concept_embedding_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size), 'w') as f_out:
         for w,norm in concept_embeddings:
           f_out.write(w+'\t'+','.join([str(d) for d in norm])+'\n')
