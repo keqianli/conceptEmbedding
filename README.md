@@ -78,10 +78,10 @@ The input can be either one document per line or one document per file. Dependin
 There output consists of 
 * ```segmented_text.txt_phraseAsWord```
 The segmented text, each phrase is represented as words joined by underscore.
-* segmented_text.txt_phraseAsWord.concept_embedding*
+* ```segmented_text.txt_phraseAsWord.concept_embedding*```
 The concept/phrase embedding, each line takes the following form.
 ```
 [concept]\t[embedding array]
 ```
-* segmented_text.txt_phraseAsWord.model*
+* ```segmented_text.txt_phraseAsWord.model*```
 The dump of gensim word2vec model.
