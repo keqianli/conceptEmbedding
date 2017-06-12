@@ -23,8 +23,8 @@ export RAW_TEXT=$DATADIR/out_queue.txt_abstract
 export OMP_NUM_THREADS=36
 export NUM_KEYPHRASES=400000
 
-cp -n tmp/$DATASET/keyphrases.csv $DATADIR
-cp -n tmp/$DATASET/segmentation.model $DATADIR
+# cp -n tmp/$DATASET/keyphrases.csv $DATADIR
+# cp -n tmp/$DATASET/segmentation.model $DATADIR
 
 echo -e "${Green}Identifying Phrases in Input File${NC}"
 ./SegPhrase/bin/segphrase_parser tmp/$DATASET/segmentation.model \

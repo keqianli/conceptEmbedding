@@ -7,7 +7,9 @@ import collections
 from gensim.models import word2vec
 import gensim
 
-file = './data/input.txt_phraseAsWord.txt'
+file = 'data/segmented_text.txt_phraseAsWord'
+
+logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 import sys
 if len(sys.argv) > 1:
@@ -28,4 +30,10 @@ for size in [50,128,200]:
         trim_rule = trim_rule, sg=sg)
 
       max_vocab_size = -1 if max_vocab_size == None else max_vocab_size
+
+      concept_embeddings = [(w,model.syn0[model.vocab[w].index]) for w in model.index2word if '_' in w]
+
       model.save(file + '.model_wordPruning_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size))
+      with open(file+'.concept_embedding_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size), 'w') as f_out:
+        for w,norm in concept_embeddings:
+          f_out.write(w+'\t'+','.join([str(d) for d in norm])+'\n')
