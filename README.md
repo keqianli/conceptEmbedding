@@ -17,14 +17,9 @@ $ sudo apt-get install g++-4.8
 ```
 $ sudo apt-get install python
 ```
-* scikit-learn
+* other python packages
 ```
-$ sudo apt-get install pip
-$ sudo pip install sklearn
-```
-* gensim
-```
-$ sudo pip install gensim
+$ sudo pip install -r requirements.txt
 ```
 
 
