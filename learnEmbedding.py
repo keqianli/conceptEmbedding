@@ -31,7 +31,7 @@ for size in [50,128,200]:
 
       max_vocab_size = -1 if max_vocab_size == None else max_vocab_size
 
-      concept_embeddings = [(w,model.syn0[model.vocab[w].index]) for w in model.wv.index2word if '_' in w]
+      concept_embeddings = [(w,model.wv[w]) for w in model.wv.index2word if '_' in w]
 
       model.save(file + '.model_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size))
       with open(file+'.concept_embedding_dimension%d_sg%d_max_vocab_size%d' % (size, sg, max_vocab_size), 'w') as f_out:
