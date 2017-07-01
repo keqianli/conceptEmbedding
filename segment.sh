@@ -21,13 +21,9 @@ export DATADIR=/local/home/klee/workspace/data/data_oneFilePerLineBySection/$DAT
 export RAW_TEXT=$DATADIR/out_queue.txt_abstract
 
 export OMP_NUM_THREADS=36
-export NUM_KEYPHRASES=400000
-
-# cp -n tmp/$DATASET/keyphrases.csv $DATADIR
-# cp -n tmp/$DATASET/segmentation.model $DATADIR
 
 echo -e "${Green}Identifying Phrases in Input File${NC}"
 ./SegPhrase/bin/segphrase_parser tmp/$DATASET/segmentation.model \
-  tmp/$DATASET/keyphrases.csv $NUM_KEYPHRASES $RAW_TEXT $RAW_TEXT._segmented_$NUM_KEYPHRASES.txt 1
+  tmp/$DATASET/keyphrases.csv $RETAIN_PHRASES_RATIO $RAW_TEXT $RAW_TEXT._segmented_$RETAIN_PHRASES_RATIO.txt 1
 
 
