@@ -1,7 +1,7 @@
 # !/bin/bash
 
 # DATASET="yelp"
-export DATASET="signal_processing"
+export DATASET=${DATASET:- "signal_processing"}
 export DATADIR=${DATADIR:- /local/home/klee/workspace/data/data_oneFilePerLine/signal_processing}
 # /home/keqian/coderepo/data/fullpaper_oneFilePerLine
 export RAW_TEXT=${RAW_TEXT:- $DATADIR/output.txt_pureText.txt}
@@ -21,6 +21,10 @@ if type "pypy" > /dev/null; then
 fi
 
 
+# echo $DATASET
+# echo $RAW_TEXT
+# echo $DATADIR
+# echo $RETAIN_PHRASES_RATIO
 
 echo -e "${Green}Training SegPhrase${NC}"
 ./domain_keyphrase_extraction.sh
