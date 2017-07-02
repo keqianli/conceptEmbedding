@@ -68,17 +68,16 @@ Number of occurrences for a valid domain keyphrase in the corpus.
 
 ## Input Format
 The input can be either one document per line or one document per file. Depending on whether you want to set the paramter $DATADIR_oneDocPerFile.
+Since Segphrase parser uses square brackets to identify phrases in the segmented text, these brackets should be cleaned from input files to avoid misidentification.
 
 ## Output Format
 There output consists of 
 * ```segmented_text.txt_phraseAsWord```
 The segmented text, each phrase is represented as words joined by underscore.
 * ```segmented_text.txt_phraseAsWord.concept_embedding*.json```
-<!-- The concept/phrase embedding, each line takes the following form. -->
-The concept/phrase embedding is a json file, each term following the structure of
+The concept/phrase embedding, each term follows the structure of
 ```
-<!-- [concept]\t[embedding array] -->
-  concept : list form of embedding array
+  concept : list form of concept embedding array
 ```
 * ```segmented_text.txt_phraseAsWord.model*```
 The dump of gensim word2vec model.

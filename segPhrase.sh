@@ -1,11 +1,8 @@
 # !/bin/bash
 
-# DATASET="yelp"
 export DATASET=${DATASET:- "signal_processing"}
-export DATADIR=${DATADIR:- /local/home/klee/workspace/data/data_oneFilePerLine/signal_processing}
-# /home/keqian/coderepo/data/fullpaper_oneFilePerLine
+export DATADIR=${DATADIR:- `pwd`/data/signal_processing}
 export RAW_TEXT=${RAW_TEXT:- $DATADIR/output.txt_pureText.txt}
-# segmentatorInline.txt_sectionPerLine_pureText.txt
 
 
 Green='\033[0;32m'
@@ -20,11 +17,6 @@ if type "pypy" > /dev/null; then
       export PYPY=pypy
 fi
 
-
-# echo $DATASET
-# echo $RAW_TEXT
-# echo $DATADIR
-# echo $RETAIN_PHRASES_RATIO
 
 echo -e "${Green}Training SegPhrase${NC}"
 ./domain_keyphrase_extraction.sh
