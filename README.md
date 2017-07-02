@@ -57,9 +57,9 @@ OMP_NUM_THREADS=36
 Number of threads.
 
 ```
-NUM_KEYPHRASES=40000
+RETAIN_PHRASES_RATIO=0.5
 ```
-Number of domain keyphrases extracted by SegPhrase
+Ratio of domain keyphrases in generated keyphrases.csv used to parse the corpus by SegPhrase
 
 ```
 MIN_PHRASE_SUPPORT=10
@@ -69,14 +69,13 @@ Number of occurrences for a valid domain keyphrase in the corpus.
 ## Input Format
 The input can be either one document per line or one document per file. Depending on whether you want to set the paramter $DATADIR_oneDocPerFile.
 
+Since Segphrase parser uses square brackets to identify phrases in the segmented text, these brackets should be cleaned from input files to avoid misidentification.
+
 ## Output Format
 There output consists of 
 * ```segmented_text.txt_phraseAsWord```
 The segmented text, each phrase is represented as words joined by underscore.
-* ```segmented_text.txt_phraseAsWord.concept_embedding*```
-The concept/phrase embedding, each line takes the following form.
-```
-[concept]\t[embedding array]
-```
+* ```segmented_text.txt_phraseAsWord.concept_embedding*.json```
+The concept/phrase embedding, each term follows the structure of ```concept : list form of concept embedding array```.
 * ```segmented_text.txt_phraseAsWord.model*```
 The dump of gensim word2vec model.

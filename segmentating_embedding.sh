@@ -1,5 +1,7 @@
+#!/bin/bash
+
 export DATASET="signal_processing"
-export DATADIR_oneDocPerFile=`pwd`/data/signal_processin_oneDocPerFile
+#export DATADIR_oneDocPerFile=`pwd`/data/signal_processin_oneDocPerFile
 export DATADIR=`pwd`/data/signal_processing
 export RAW_TEXT=$DATADIR/input.txt
 
