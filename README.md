@@ -68,6 +68,7 @@ Number of occurrences for a valid domain keyphrase in the corpus.
 
 ## Input Format
 The input can be either one document per line or one document per file. Depending on whether you want to set the paramter $DATADIR_oneDocPerFile.
+
 Since Segphrase parser uses square brackets to identify phrases in the segmented text, these brackets should be cleaned from input files to avoid misidentification.
 
 ## Output Format
