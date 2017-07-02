@@ -75,9 +75,6 @@ There output consists of
 * ```segmented_text.txt_phraseAsWord```
 The segmented text, each phrase is represented as words joined by underscore.
 * ```segmented_text.txt_phraseAsWord.concept_embedding*.json```
-The concept/phrase embedding, each term follows the structure of
-```
-  concept : list form of concept embedding array
-```
+The concept/phrase embedding, each term follows the structure of ```concept : list form of concept embedding array```.
 * ```segmented_text.txt_phraseAsWord.model*```
 The dump of gensim word2vec model.
